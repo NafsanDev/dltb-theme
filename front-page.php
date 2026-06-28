@@ -33,7 +33,7 @@
                 <button type="button" class="arrow down">▼</button>
               </div>
             </div>
-            <button type="submit" class="search-btn search" id="hsf_submit">Book Ticket</button>
+            <button type="submit" class="search-btn search">Book Ticket</button>
         </div>
     </div>
       <div class="quick-routes">

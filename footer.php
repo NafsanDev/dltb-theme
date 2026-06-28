@@ -11,26 +11,29 @@
           <div class="search-fields">
             <div class="field">
               <label>From</label>
-              <input type="text" class="origin" placeholder="e.g. Manila" value="Manila">
-               
+              <input type="text" class="origin" placeholder="e.g. Manila" value="Manila">               
             </div>
-            <button type="button" class="swap">⇄</button>
+            <div class="field" style="max-width: 40px;">
+              <button type="button" class="swap" style="height: 45px; border-radius: 4px;">⇄</button>
+            </div>
             <div class="field">
               <label>To</label>
-              <input type="text" class="destination" placeholder="e.g. Legazpi" value="Legazpi">
-               
+              <input type="text" class="destination" placeholder="e.g. Legazpi" value="Legazpi">               
             </div>
             <div class="field">
               <label>Travel Date</label>
               <input type="date" class="date">
             </div>
+            <div class="field" style="flex: 1; position: relative;">
+              <label>Passengers</label>
+              <input type="number" class="passengers" min="1" value="1">
+              <div class="arrow-container" style="top: 25px; height: calc(100% - 25px);">
+                <button type="button" class="arrow up">▲</button>
+                <button type="button" class="arrow down">▼</button>
+              </div>
           </div>
-          <input type="number" class="passengers" min="1" value="1">
-          <div class="arrow-container">
-            <button type="button" class="arrow up">▲</button>
-            <button type="button" class="arrow down">▼</button>
           </div>
-          <button class="btn-cta btn-search-cta search">Book Your Trip Now</button>
+          <button class="btn-cta search">Book Your Trip Now</button>
         </div>
       </div>
 
