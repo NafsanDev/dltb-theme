@@ -13,24 +13,28 @@
     </p>
     <div class="transparent-search bus-search">
         <div class="search-form">
-            <div class="search-field">
-                <i class="fas fa-map-marker-alt"></i>
-                <input type="text" class="origin" id="hsf_origin" value="Manila" data-target="hsfOriginResults" aria-label="Origin" placeholder="From: Manila, Pasay">                 
+            <div class="first-section">
+              <div class="search-field">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <input type="text" class="origin city" value="Manila" placeholder="e.g. Manila">                 
+              </div>
+              <button type="button" class="swap">⇄</button>
+              <div class="search-field">
+                  <i class="fas fa-flag-checkered"></i>
+                  <input type="text" class="destination city" value="Legazpi" placeholder="e.g. Legazpi">                 
+              </div>
             </div>
-            <button type="button" class="swap">⇄</button>
-            <div class="search-field">
-                <i class="fas fa-flag-checkered"></i>
-                <input type="text" class="destination" id="hsf_destination" value="Legazpi" data-target="hsfDestinationResults" aria-label="Destination" placeholder="To: Legazpi, Naga">                 
-            </div>
-            <div class="search-field">
-                <i class="fas fa-calendar-alt"></i>
-                <input type="date" class="date" id="hsf_dates" value="" aria-label="Date">
-            </div>
-            <div class="search-field" style="max-width:65px;">
-              <input type="number" class="passengers" min="1" value="2">
-              <div class="arrow-container">
-                <button type="button" class="arrow up">▲</button>
-                <button type="button" class="arrow down">▼</button>
+            <div class="second-section">
+              <div class="search-field date-field">
+                  <i class="fas fa-calendar-alt"></i>
+                  <input type="date" class="date" value="">
+              </div>
+              <div class="search-field number-field">
+                <input type="number" class="passengers" min="1" value="2">
+                <div class="arrow-container">
+                  <button type="button" class="arrow increase">▲</button>
+                  <button type="button" class="arrow decrease">▼</button>
+                </div>
               </div>
             </div>
             <button type="submit" class="search-btn search">Book Ticket</button>

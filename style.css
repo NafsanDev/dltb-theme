@@ -422,6 +422,17 @@ nav.scrolled .hamburger span              { background: var(--ink); }
   padding: 4px;
   box-sizing: border-box;
 }
+.first-section,
+.second-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 5px;
+}
+.date-field { width: 75%; }
+.number-field { width: calc(25% - 8px) }
 .search-field {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 40px;
@@ -430,19 +441,8 @@ nav.scrolled .hamburger span              { background: var(--ink); }
   align-items: center;
   gap: 8px;
   position: relative;
+  height: 40px;
 }
-/*.search-field:nth-child(1),
-.swap:nth-child(2),
-.search-field:nth-child(3) {
-  flex: 1 1 calc(33.333% - 11px); 
-}
-.search-field:nth-child(4),
-.search-field:nth-child(5) {
-  flex: 1 1 calc(50% - 8px);
-}
-.search-btn:nth-child(6) {
-  flex: 1 1 100%;
-}*/
 .search-field i {
   color: var(--sage);
   font-size: 1rem;
@@ -464,8 +464,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer; 
 }
 .swap {
-    width: 40px;
-    height: 36px;
+    min-width: 40px;
+    height: 34px;
     background: var(--sage);
     color: var(--crimson);
     font-size: 0.9rem;
@@ -544,6 +544,9 @@ ul.city-list {
     transition: transform .3s;
     box-shadow: 0 1px 3px rgb(0 0 0 / 25%), 0 19px 38px 0 rgb(0 0 0 / 30%);
 }
+.field ul.city-list {
+  margin: 62px 0 0;
+}
 .city-list li {
     color: white;
     padding: 8px 10px;
@@ -619,25 +622,6 @@ ul.city-list {
 .field input::placeholder { color: rgba(255,255,255,0.3); }
 .field input:focus { border-color: var(--teal); }
 .field input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(1); opacity: 0.5; }
-
-.btn-search-main {
-  width: 100%;
-  padding: 15px;
-  background: var(--crimson);
-  border: none;
-  border-radius: 4px;
-  color: var(--white);
-  font-family: var(--font-head);
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  transition: background 0.25s, transform 0.2s;
-}
-.btn-search-main:hover {
-  background: var(--wine);
-  transform: translateY(-1px);
-}
 .btn-cta {
   width: 100%;
   display: inline-block;
@@ -656,7 +640,7 @@ ul.city-list {
 }
 .btn-cta:hover { background: var(--wine); transform: translateY(-2px); box-shadow: 0 14px 40px rgba(174,36,72,0.38); }
 
-.is-invalid {
+.error {
     border: 1px solid red !important;
 }
 
@@ -1093,14 +1077,22 @@ footer {
   .nav-links a { font-size: 0.9rem; }
   .container { padding: 0 52px; }
   ul.city-list {
-    margin: 55px 0 0;
+    margin: 51px 0 0;
   }
-  .search-form{ 
-    align-items: center;
-    gap: 4px
+  .first-section {
+    flex: 1 1 50%;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  } 
+  .second-section {
+    flex: 1 1 calc(50% - 156px);
+    margin-bottom: 0;
   }
-  .search-field {
-    flex: 1 1 0;
+  .date-field {
+    width: 75%;
+  }
+  .number-field {
+    width: calc(25% - 4px);
   }
   .search-fields {
     flex-direction: row;

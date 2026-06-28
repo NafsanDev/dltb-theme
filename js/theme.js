@@ -104,41 +104,98 @@ document.querySelectorAll(".date").forEach(element => {
   element.value = dateString;
 });
 
-// Swap origin & destination
-const bookingSwap = document.querySelector(".swap");
-bookingSwap.addEventListener("click", function () {
-    const bookingOrigin = document.querySelector(".origin");
-    const bookingDestination = document.querySelector(".destination");
-    const temp = bookingOrigin.value;
-    bookingOrigin.value = bookingDestination.value;
-    bookingDestination.value = temp; 
-
-});
-// Initialize every search widget
 document.querySelectorAll(".bus-search").forEach(initWidget);
 
 function initWidget(widget) {
 
     const origin = widget.querySelector(".origin");
     const destination = widget.querySelector(".destination");
+    const date = widget.querySelector(".date");
+    const passengers = widget.querySelector(".passengers");
+
+    const swap = widget.querySelector(".swap");
     const search = widget.querySelector(".search");
 
-    createDropdown(origin);
-    createDropdown(destination); 
+    const increase = widget.querySelector(".increase");
+    const decrease = widget.querySelector(".decrease");
 
-    // Search button
+    createDropdown(origin);
+    createDropdown(destination);
+
+    // Swap
+    swap.addEventListener("click", function () {
+        const temp = origin.value;
+        origin.value = destination.value;
+        destination.value = temp;
+    });
+
+    // Increase passengers
+    increase.addEventListener("click", function () {
+        passengers.value = parseInt(passengers.value || 1) + 1;
+    });
+
+    // Decrease passengers
+    decrease.addEventListener("click", function () {
+        let value = parseInt(passengers.value || 1);
+
+        if (value > 1) {
+            passengers.value = value - 1;
+        }
+    });
+
+    // Search
     search.addEventListener("click", function () {
 
-        const data = {
-            origin: origin.value,
-            destination: destination.value,
-            date: widget.querySelector(".date").value,
-            passengers: widget.querySelector(".passengers").value
-        };
+        function cityToSlug(city) {
+            return city
+                .trim()
+                .toLowerCase()
+                .replace(/\s+/g, "-");
+        }
 
-        console.log("Searching:", data);
+        const from = cityToSlug(origin.value);
+        const to = cityToSlug(destination.value);
+        const travelDate = date.value;
+        const people = passengers.value;
 
-        // Your search function here...
+        // Reset previous errors
+        origin.classList.remove("error");
+        destination.classList.remove("error");
+        date.classList.remove("error");
+
+        // Validation
+        if (!from) {
+            origin.classList.add("error");
+            origin.focus();
+            return;
+        }
+
+        if (!to) {
+            destination.classList.add("error");
+            destination.focus();
+            return;
+        }
+
+        if (from === to) {
+            alert("Origin and destination cannot be the same.");
+            destination.focus();
+            return;
+        }
+
+        if (!travelDate) {
+            date.classList.add("error");
+            date.focus();
+            return;
+        }
+
+        // Build URL
+        const url =
+            `https://book.phbus.com/en/travel/${encodeURIComponent(from)}/${encodeURIComponent(to)}` +
+            `?date=${travelDate}&people=${people}&z=1563876&sub_id=dltbonlinebooking.ph`;
+
+        // Redirect
+        window.open(url, '_blank');
+
     });
 
     function createDropdown(input) {
@@ -152,10 +209,8 @@ function initWidget(widget) {
             li.textContent = city;
 
             li.addEventListener("click", function () {
-
                 input.value = city;
                 list.style.display = "none";
-
             });
 
             list.appendChild(li);
@@ -166,7 +221,6 @@ function initWidget(widget) {
 
         input.addEventListener("click", function () {
 
-            // Hide dropdowns only inside this widget
             widget.querySelectorAll(".city-list").forEach(dropdown => {
                 dropdown.style.display = "none";
             });
@@ -179,13 +233,16 @@ function initWidget(widget) {
 
 }
 
-// Hide all dropdowns when clicking outside any widget
+// Hide dropdowns when clicking outside
 document.addEventListener("click", function (e) {
 
-    if (e.target.closest(".bus-search")) return;
+    // If the click is NOT on a city input or inside a dropdown
+    if (!e.target.closest(".city") && !e.target.closest(".city-list")) {
 
-    document.querySelectorAll(".city-list").forEach(list => {
-        list.style.display = "none";
-    });
+        document.querySelectorAll(".city-list").forEach(list => {
+            list.style.display = "none";
+        });
+
+    }
 
 });

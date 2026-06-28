@@ -9,16 +9,16 @@
       <div class="search-box bus-search">
         <div class="search-card">
           <div class="search-fields">
-            <div class="field">
+            <div class="field" style="position: relative;">
               <label>From</label>
-              <input type="text" class="origin" placeholder="e.g. Manila" value="Manila">               
+              <input type="text" class="origin city" placeholder="e.g. Manila" value="Manila">               
             </div>
             <div class="field" style="max-width: 40px;">
               <button type="button" class="swap" style="height: 45px; border-radius: 4px;">⇄</button>
             </div>
-            <div class="field">
+            <div class="field" style="position: relative;">
               <label>To</label>
-              <input type="text" class="destination" placeholder="e.g. Legazpi" value="Legazpi">               
+              <input type="text" class="destination city" placeholder="e.g. Legazpi" value="Legazpi">               
             </div>
             <div class="field">
               <label>Travel Date</label>
@@ -26,10 +26,10 @@
             </div>
             <div class="field" style="flex: 1; position: relative;">
               <label>Passengers</label>
-              <input type="number" class="passengers" min="1" value="1">
+              <input type="number" class="passengers" min="1" value="2">
               <div class="arrow-container" style="top: 25px; height: calc(100% - 25px);">
-                <button type="button" class="arrow up">▲</button>
-                <button type="button" class="arrow down">▼</button>
+                <button type="button" class="arrow increase">▲</button>
+                <button type="button" class="arrow decrease">▼</button>
               </div>
           </div>
           </div>
