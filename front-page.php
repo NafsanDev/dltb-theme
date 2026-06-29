@@ -67,77 +67,13 @@
     </div>
   </div>
 </section>
-
-<!-- How it works -->
-<section class="section-how">
-  <div class="container">
-    <p class="sec-tag">How It Works</p>
-    <h2 class="sec-title">Book Your Seat in <em>4 Easy Steps</em></h2>
-    <p>Firstly, DLTB Online Booking is just a few clicks. Secondly, enjoy comfortable, reliable, and affordable rides.  Therefore, experience seamless travel across the Philippines with the Bus. So Book Your Ticket in 4 Easy Steps.</p>
-    <div class="steps-row">
-      <div class="step-card">
-        <div class="step-num">01</div>
-        <div class="step-title">Search</div>
-        <p class="step-text">Enter your departure city, destination, and preferred travel date to find available trips.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">02</div>
-        <div class="step-title">Select</div>
-        <p class="step-text">Choose your preferred schedule and pick the best available seat on the bus.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">03</div>
-        <div class="step-title">Input</div>
-        <p class="step-text">Provide your passenger and contact details to confirm your reservation.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">04</div>
-        <div class="step-title">Pay &amp; Go</div>
-        <p class="step-text">Pay securely via card or e-wallet and receive your e-ticket instantly.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Popular Routes -->
-<section class="section-routes">
-  <div class="container">
-    <p class="sec-tag">Where We Go</p>
-    <h2 class="sec-title">Popular Routes</h2>
-    <div class="routes-row">
-      <div class="route-card">
-        <div class="route-icon">🚌</div>
-        <div class="route-from">From Manila</div>
-        <div class="route-name">Manila → Legazpi</div>
-        <div class="route-link">Book now</div>
-      </div>
-      <div class="route-card">
-        <div class="route-icon">🚌</div>
-        <div class="route-from">From Manila</div>
-        <div class="route-name">Manila → Naga</div>
-        <div class="route-link">Book now</div>
-      </div>
-      <div class="route-card">
-        <div class="route-icon">🚌</div>
-        <div class="route-from">From Manila</div>
-        <div class="route-name">Manila → Bicol</div>
-        <div class="route-link">Book now</div>
-      </div>
-      <div class="route-card">
-        <div class="route-icon">🚌</div>
-        <div class="route-from">From PITX</div>
-        <div class="route-name">PITX → Sorsogon</div>
-        <div class="route-link">Book now</div>
-      </div>
-      <div class="route-card">
-        <div class="route-icon">🚌</div>
-        <div class="route-from">From Buendia</div>
-        <div class="route-name">Buendia → Daet</div>
-        <div class="route-link">Book now</div>
-      </div>
-    </div>
-  </div>
-</section>
+<?php
+if ( have_posts() ) : 
+    while ( have_posts() ) : the_post();
+        the_content(); 
+    endwhile; 
+endif;
+?>
 
 <!-- Features -->
 <section class="section-features">

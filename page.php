@@ -3,10 +3,6 @@
 <!-- Full viewport hero with transparent search bar (same as front-page) -->
 <section class="hero" id="home">
   <div class="hero-body">
-    <div class="pill-tag">
-      <span class="pill-dot"></span>
-      Go Anywhere, Book Instantly.
-    </div>
     <h1>DLTB <span>BUS,</span><br>Online <mark>Booking.</mark></h1>
     <p class="hero-intro">
       DLTB Online Booking is just a few clicks. Enjoy comfortable, reliable, affordable rides, and experience seamless travel across the Philippines with the DLTB Co.
@@ -39,31 +35,6 @@
             </div>
             <button type="submit" class="search-btn search">Book Ticket</button>
         </div>
-    </div>
-      <div class="quick-routes">
-        <span class="q-tag">Manila → Legazpi</span>
-        <span class="q-tag">Manila → Naga</span>        
-        <span class="q-tag">Manila → Bicol</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-stats">
-    <div class="stat-item">
-      <span class="stat-num">140+</span>
-      <span class="stat-lbl">Owned Buses</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">125</span>
-      <span class="stat-lbl">Daily Trips</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">70 yrs</span>
-      <span class="stat-lbl">In Service</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">20</span>
-      <span class="stat-lbl">Ticket Counters</span>
     </div>
   </div>
 </section>
