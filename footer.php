@@ -1,3 +1,33 @@
+<?php if (is_front_page()) : ?>
+  <section class="section-routes">
+    <div class="container">
+      <p class="sec-tag">Get in touch</p>
+      <h2 class="sec-title">DLTB Co. <em>Contacts</em></h2>
+      <div class="dltb-contacts">
+        <div class="contacts-icon"><i class="fas fa-address-card"></i></div>
+        <div class="contacts-text">
+          <p><strong>Address:</strong><br>518 Epifanio de los Santos Ave, 150, Pasay, 1300 Metro Manila, Philippines.</p>
+        </div>
+      </div>
+      <div class="dltb-contacts">
+        <div class="contacts-icon"><i class="fas fa-phone-volume"></i></div>
+        <div class="contacts-text">
+          <p><strong>Phone:</strong><br>+63 2 8843 0246</p>
+        </div>
+      </div>
+      <div class="dltb-contacts">
+        <div class="contacts-icon"><i class="fa fa-envelope"></i></div>
+        <div class="contacts-text">
+          <p><strong>Email:</strong><br><a href="mailto:dltb_aom22@yahoo.com">dltb_aom22@yahoo.com</a></p>
+        </div>
+      </div>
+      <a href="https://maps.app.goo.gl/f4MVX4ZWXtPunAHU6">
+        <img data-lazyloaded="1" src="https://dltbonlinebooking.ph/wp-content/uploads/2025/11/dltb-online-booking-address-1.jpg" decoding="async" width="1205" height="505" data-src="https://dltbonlinebooking.ph/wp-content/uploads/2025/11/dltb-online-booking-address-1.jpg" class="attachment-full size-full wp-image-2651 entered litespeed-loaded" alt="dltb online booking address" data-srcset="https://dltbonlinebooking.ph/wp-content/uploads/2025/11/dltb-online-booking-address-1.jpg 1205w, https://dltbonlinebooking.ph/wp-content/uploads/2025/11/dltb-online-booking-address-1-300x126.jpg 300w, https://dltbonlinebooking.ph/wp-content/uploads/2025/11/dltb-online-booking-address-1-1024x429.jpg 1024w, https://dltbonlinebooking.ph/wp-content/uploads/2025/11/dltb-online-booking-address-1-768x322.jpg 768w" data-sizes="(max-width: 1205px) 100vw, 1205px" data-ll-status="loaded" sizes="(max-width: 1205px) 100vw, 1205px" srcset="https://dltbonlinebooking.ph/wp-content/uploads/2025/11/dltb-online-booking-address-1.jpg 1205w, https://dltbonlinebooking.ph/wp-content/uploads/2025/11/dltb-online-booking-address-1-300x126.jpg 300w, https://dltbonlinebooking.ph/wp-content/uploads/2025/11/dltb-online-booking-address-1-1024x429.jpg 1024w, https://dltbonlinebooking.ph/wp-content/uploads/2025/11/dltb-online-booking-address-1-768x322.jpg 768w">
+      </a>
+    </div>
+  </section>
+<?php endif; ?>
+
 <!-- CTA -->
 <section class="section-cta" id="booking">
   <div class="container">
@@ -48,6 +78,10 @@
       <div class="footer-brand">
         <div class="footer-logo-text">DLTB <em>CO</em></div>
         <p class="footer-tagline">Connecting the Philippines through fast, reliable, and affordable bus travel since 1954.</p>
+        <div class="dltb-social">
+          <a href="https://www.facebook.com/@dltbonline/"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://www.instagram.com/dltbco.official/"><i class="fab fa-instagram-square"></i></a>
+        </div>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
@@ -80,6 +114,7 @@
     <div class="footer-bottom">
       <span>© <?php echo date('Y'); ?> DLTB CO. All rights reserved.</span>
       <span>Designed for seamless travel across Luzon.</span>
+      <span><strong>Disclaimer:</strong> This website is not an official website of DLTB. We provide ticketing services as a reseller to help customers book DLTB routes conveniently online.</span>
     </div>
   </div>
 </footer>

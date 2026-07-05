@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // FAQ accordion
-    const faqItems = document.querySelectorAll('.faq-item');
+    const faqItems = document.querySelectorAll('.schema-faq-section');
     faqItems.forEach(item => {
-        const q = item.querySelector('.faq-q');
+        const q = item.querySelector('.schema-faq-question');
         if (q) {
             q.addEventListener('click', () => {
                 item.classList.toggle('open');
