@@ -74,5 +74,4 @@ if ( have_posts() ) :
     endwhile; 
 endif;
 ?>
-<h2>Your Static Section Goes Here.</p>
 <?php get_footer(); ?>

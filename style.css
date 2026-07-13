@@ -684,6 +684,14 @@ ul.city-list {
   to   { opacity: 1; transform: translateY(0); }
 }
 /* 
+   11. home
+ */
+ section p { font-size: 1rem; }
+ .wpcp-carousel-wrapper { background: #2d0f1d;  padding: 10px 0; }
+ .wpcp-slide-image { height: 320px;}
+ .wpcp-carousel-section .wpcp-single-item img { height: 100%; }
+ .wpcp-carousel-section.nav-vertical-center { margin: 0 ;}
+/* 
    11. FAQ
  */
 .section-faq { padding: 64px 0; background: var(--bg-2); }
@@ -941,6 +949,7 @@ footer {
 /* ── lg: 768px ── */
 @media (min-width: 768px) {
   /* Section padding */
+   .wpcp-slide-image { height: 360px; }
   .section-how      { padding: 96px 0; }
   .section-routes   { padding: 96px 0; }
   .section-features { padding: 96px 0; }
@@ -1016,6 +1025,7 @@ footer {
     flex-direction: row;
   }
   .search-card{ padding: 30px 30px 26px; }
+   .wpcp-slide-image { height: 510px; }
   /* Footer: all inline */
   .footer-cols { gap: 40px; }
   .footer-col { flex: 1 1 auto; }
