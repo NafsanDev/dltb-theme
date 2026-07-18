@@ -26,7 +26,7 @@
 }
 .sec-title {
   font-family: var(--font-head);
-  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
   font-weight: 900;
   line-height: 1.15;
   color: var(--ink);
@@ -60,9 +60,9 @@
 }
 .step-card:hover                { box-shadow: 0 12px 40px rgba(110,26,55,0.1); transform: translateY(-3px); }
 .step-card:hover::before        { opacity: 1; }
-.step-num   { font-family: var(--font-head); font-size: 2.8rem; font-weight: 900; color: rgba(174,36,72,0.1); line-height: 1; margin-bottom: 10px; }
+.step-num   { font-family: var(--font-head); font-size: 2.8rem; font-weight: 900; color: rgba(174,36,72,0.25); line-height: 1; margin-bottom: 10px; }
 .step-title { font-family: var(--font-head); font-size: 1.3rem; font-weight: 700; color: var(--wine); margin-bottom: 7px; }
-.step-text  { font-size: 0.875rem; font-weight: 300; line-height: 1.7; color: var(--muted); }
+.step-text  { font-size: 0.9rem; font-weight: 300; line-height: 1.7; color: var(--ink); }
 
 /* 
    9. POPULAR ROUTES

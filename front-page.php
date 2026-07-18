@@ -5,11 +5,11 @@
   <div class="hero-body">
     <div class="pill-tag">
       <span class="pill-dot"></span>
-      Go Anywhere, Book Instantly.
+       bus ticket in Minutes, Anytime, Anywhere.
     </div>
-    <h1>DLTB <span>BUS,</span><br>Online <mark>Booking.</mark></h1>
+    <h1>DLTB CO <span>BUS,</span><br>Online <mark>Booking.</mark></h1>
     <p class="hero-intro">
-      DLTB Online Booking is just a few clicks. Enjoy comfortable, reliable, affordable rides, and experience seamless travel across the Philippines with the DLTB Co.
+      Plan your trip with ease using our DLTB Bus Co. online booking platform. Check bus schedules, compare coaches, fares, and seat reservation in just a few taps.
     </p>
     <div class="transparent-search bus-search">
         <div class="search-form">
@@ -21,7 +21,7 @@
               <button type="button" class="swap">⇄</button>
               <div class="search-field">
                   <i class="fas fa-flag-checkered"></i>
-                  <input type="text" class="destination city" value="Legazpi" placeholder="e.g. Legazpi">                 
+                  <input type="text" class="destination city" value="Bicol" placeholder="e.g. Bicol">                 
               </div>
             </div>
             <div class="second-section">
@@ -41,9 +41,9 @@
         </div>
     </div>
       <div class="quick-routes">
-        <span class="q-tag">Manila → Legazpi</span>
-        <span class="q-tag">Manila → Naga</span>        
-        <span class="q-tag">Manila → Bicol</span>
+        <a class="q-tag" href="<?php echo esc_url( home_url( '/manila-to-legazpi/' ) ); ?>">Manila → Legazpi</a>
+        <a class="q-tag" href="<?php echo esc_url( home_url( '/manila-to-naga/' ) ); ?>">Manila → Naga</a>        
+        <a class="q-tag" href="<?php echo esc_url( home_url( '/manila-to-bicol/' ) ); ?>">Manila → Bicol</a>
       </div>
     </div>
   </div>

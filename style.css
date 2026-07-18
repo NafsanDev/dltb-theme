@@ -340,7 +340,7 @@ nav.scrolled .hamburger span              { background: var(--ink); }
   border: 1px solid rgba(213,231,181,0.45);
   border-radius: 100px;
   padding: 6px 16px;
-  font-size: 0.68rem;
+  font-size: 0.67rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1003,6 +1003,7 @@ footer {
 @media (min-width: 1024px) {
   .nav-links a { font-size: 0.9rem; }
   .container { padding: 0 52px; }
+  .pill-tag { font-size: 0.8rem; }
   ul.city-list {
     margin: 51px 0 0;
   }
